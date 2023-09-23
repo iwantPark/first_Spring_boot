@@ -1,0 +1,17 @@
+{{>layouts/header}}
+<!-- css 코드 작성 -->
+<form class="container" action="/article/create" method="post">
+    <!--action = URL 연결 주소를 적는다. ex) /article/create 페이지로 폼 데이터를 보낸다는 뜻 입니다.
+        method = get, post 요청 ex)post는 서버로 데이터를 제출하는 데 사용됩니다. 주로 양식(form) 데이터를 서버로 전송하는 데에 사용됩니다.-->
+    <div class="mb-3">
+        <label class="form-label">제목</label>
+        <input type="text" class="form-control" name="title">   <!-- DTO의 title필드와 연결. -->
+    </div>
+    <div class="mb-3">
+        <label class="form-label">내용</label>
+        <textarea class="form-control" rows="3" name="content"></textarea> <!-- DTO의 content필드와 연결. -->
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+{{>layouts/footer}}
